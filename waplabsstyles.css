@@ -1,3 +1,9 @@
 .namecss {
     font-size: 30px;
 }
+
+#devphoto {
+    border-radius: 30%;
+    height: 300px;
+    width: 300px;
+}
