@@ -1,0 +1,112 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#page {
+  display: grid;
+  grid-template-areas:
+    "h h h h"
+    "h h h h"
+    "n n n n"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "f f f f";
+}
+
+#head-contents {
+  grid-area: h;
+  width: auto;
+  height: 100px;
+  text-align: center;
+  background-color: aquamarine;
+  border-color: 2px solid red;
+}
+
+#nav-bar {
+  grid-area: n;
+  width: auto;
+  display: flex;
+  background-color: cadetblue;
+}
+
+.menu-item {
+  text-align: center;
+  padding: 5px;
+  border-right: 2px solid;
+  border-color: darkcyan;
+}
+
+#main-contents {
+  grid-area: c;
+  border-color: 10px solid red;
+}
+
+#column1 {
+  float: left;
+  width: 24%;
+  height: 200px;
+  padding: 1%;
+  background-color: darkgray;
+
+}
+
+#column2 {
+  float: left;
+  padding: 1%;
+  width: 46%;
+  height: 200px;
+  background-color: darkkhaki;
+}
+
+#column3 {
+  float: left;
+  width: 24%;
+  height: 200px;
+  padding: 1%;
+  background-color:gainsboro;
+  border-color: 2px solid red;
+}
+
+#footer {
+  grid-area: f;
+  width: auto;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+  background-color: cadetblue;
+}
+
+@media screen and (max-width:600px) {
+
+  #column1 {
+    float: left;
+    width: auto;
+    padding: 1%;
+    width: 48%;
+    background-color: darkgray;
+  }
+  
+  #column2 {
+    float: left;
+    padding: 1%;
+    width: 48%;
+    background-color: darkkhaki;
+  }
+  
+  #column3 {
+    display: block;
+    clear: both;
+    width: 99%;
+    padding: 1%;
+    background-color:gainsboro;
+    border-color: 2px solid red;
+  }
+}
+
