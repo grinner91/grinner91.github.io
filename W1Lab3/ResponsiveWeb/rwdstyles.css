@@ -4,6 +4,7 @@ body {
 }
 
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
@@ -11,20 +12,20 @@ body {
 #page {
   display: grid;
   grid-template-areas:
-    "h h h h"
-    "h h h h"
-    "n n n n"
-    "c c c c"
-    "c c c c"
-    "c c c c"
-    "f f f f";
+    "h"
+    "n"
+    "c"
+    "f";
 }
 
 #head-contents {
   grid-area: h;
   width: auto;
   height: 100px;
+  padding: 1%;
   text-align: center;
+  font-size: 40px;
+  vertical-align: middle;
   background-color: aquamarine;
   border-color: 2px solid red;
 }
@@ -45,30 +46,29 @@ body {
 
 #main-contents {
   grid-area: c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-color: 10px solid red;
 }
 
 #column1 {
-  float: left;
-  width: 24%;
-  height: 200px;
+  flex: 1 0 400px;
+  height: 400px;
   padding: 1%;
   background-color: darkgray;
-
 }
 
 #column2 {
-  float: left;
+  flex: 2 0 400px;
   padding: 1%;
-  width: 46%;
-  height: 200px;
+  height: 400px;
   background-color: darkkhaki;
 }
 
 #column3 {
-  float: left;
-  width: 24%;
-  height: 200px;
+  flex: 1 0 400px;
+  height: 400px;
   padding: 1%;
   background-color:gainsboro;
   border-color: 2px solid red;
@@ -79,34 +79,39 @@ body {
   width: auto;
   height: 50px;
   text-align: center;
-  padding: 5px;
+  padding: 1%;
   background-color: cadetblue;
 }
 
-@media screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
+
+  #main-contents {
+    display: flex;
+    flex-direction: column;
+  }
 
   #column1 {
-    float: left;
-    width: auto;
+    flex: 1 1 400px;
+    height: 400px;
     padding: 1%;
-    width: 48%;
     background-color: darkgray;
   }
   
   #column2 {
-    float: left;
+    flex: 1 1 400px;
     padding: 1%;
-    width: 48%;
+    height: 400px;
     background-color: darkkhaki;
   }
   
   #column3 {
-    display: block;
-    clear: both;
-    width: 99%;
+    flex: 1 1 400px;
+    height: 400px;
     padding: 1%;
     background-color:gainsboro;
     border-color: 2px solid red;
   }
 }
+
+
 
