@@ -135,3 +135,37 @@ console.log("Expected output of filterLongWords(['a','bb'], 1) is  'bb' " + myFu
 console.log("Expected output of filterLongWords(['you', 'me', 'rafsan', 'zaman', 'shai'], 5) is  'rafsan' " + myFunctionTest('rafsan', filterLongWords(['you', 'me', 'rafsan', 'zaman', 'shai'], 5).toString()));
 
 //console.log(filterLongWords(['you', 'me', 'rafsan', 'zaman', 'shai'], 3))
+
+/* 
+
+9. Modify the jsfiddle on the map/filter/reduce slide ( https://jsfiddle.net/keithlevi/e6kqvx2f/9/ ) as follows:
+a) multiply each element by 10; 
+b) return array with all elements equal to 3; 
+c) return the product of all elements;
+
+*/
+
+function multiplyBy(arr) {
+  return arr.map(x => x * 10);
+}
+
+const a = [1,3,5,3,3]; 
+const b = a.map(function(elem, i, array) {
+  return elem * 10;
+})
+
+console.log("mapped items : " + b)
+//document.writeln(b.toString() + "<br/>");
+
+const c = a.filter(function(elem, i, array){
+  return elem === 3;});
+
+  console.log("filtered items equal 3 " + c)
+//document.writeln(c.toString() + "<br/>");
+
+const d = a.reduce(function(prevValue, elem, i, array){
+  return prevValue * elem;
+});
+
+console.log("reduced product of items " + d)
+

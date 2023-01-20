@@ -9,6 +9,10 @@ body {
   padding: 0px;
 }
 
+input[type=text] {
+  font-family: monospace;
+}
+
 #page {
   display: grid;
   grid-template-areas:
