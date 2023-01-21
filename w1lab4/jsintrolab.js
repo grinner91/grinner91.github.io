@@ -150,9 +150,7 @@ function multiplyBy(arr) {
 }
 
 const a = [1,3,5,3,3]; 
-const b = a.map(function(elem, i, array) {
-  return elem * 10;
-})
+const b = a.map( i => i * 10);
 
 console.log("mapped items : " + b)
 //document.writeln(b.toString() + "<br/>");
@@ -169,3 +167,24 @@ const d = a.reduce(function(prevValue, elem, i, array){
 
 console.log("reduced product of items " + d)
 
+/////////execise 
+const numbers = [175, 50, 25];
+//document.getElementById("demo").innerHTML = numbers.reduceRight(myFunc);
+
+function myFunc(total, num) {
+	console.log(total, num);
+  return total - num;
+}
+
+console.log(numbers.reduceRight(myFunc) );
+
+
+////////////////
+
+function findShortestWord(words) {
+  return words.reduce((acc, w) => acc.length < w.length ? acc : w);
+}
+
+console.log(findShortestWord(['y', 'you', 'me', 'rafsan', 'zaman', 'shai']));
+console.log("Expected output of findShortestWord(['a','bb']) is  'a' " + myFunctionTest("a", findShortestWord(['a','bb'])));
+console.log("Expected output of findShortestWord(['my', 'you', 'me', 'rafsan', 'zaman', 'shai']) is  'my' " + myFunctionTest("my", findShortestWord(['my', 'you', 'me', 'rafsan', 'zaman', 'shai'])));
