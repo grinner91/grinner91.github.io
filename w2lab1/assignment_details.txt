@@ -1,0 +1,25 @@
+This homework will have 2 parts.
+
+Part 1: Functional Programming
+
+Re-implement the following exercises from the W1D5 homework to use map/filter/reduce Array methods instead of for loops.  Then use Mocha and Chai to create a webpage that tests their functionality and upload this page (along with your code) to your github.io homepage.
+
+/* 4 Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers
+/* 5 Define a function reverse() that computes the reversal of a string.
+/* 7 Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i. */
+
+
+
+Part 2: Regular Expressions:
+
+For this assignment do the following tasks:
+
+1. Implement code for a web page the displays the attached Web Form (webform1.PNG).
+
+2. In your html form markup code from task 1, include a feature such that the User can only submit the form if the Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter).
+
+3. Add to your above web form, an additional text input field, where the user must only enter a website url, and they must enter it beginning with either the string, "http://" or "https://".
+
+4. Implement code for another web page that displays as shown in the attached image including the navbar and the Web Form (Webform2.PNG).
+
+Once again upload the resulting pages to your github.io homepage.

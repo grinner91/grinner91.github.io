@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title> WAP Regex</title>
+    <link rel="stylesheet" href="w2lab2webform1styles.css">
+    <script src="w2lab1.js"></script>
+</head>
+<body>
+    <form id="regexform" action="" method="POST" >
+            <div class="row">
+                <label> Email address</label>
+                <input type='text' 
+                id="emailaddr"
+                placeholder="enter email"
+                pattern="^[a-zA-Z0-9_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,}$"
+                title="Please, enter a valid email address."
+                >
+                <span> we'll never share your email with anyone else </span>
+            </div>
+
+            <div class="row">
+                <label> Password</label>
+                <input type='text' 
+                id="password"
+                placeholder="password"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$"
+                title="Please, valid password with aleast one digit, one uppercase, one lower case."
+                >
+            </div>
+            <div class="row">
+                <div>
+                <input type="checkbox" 
+                    id="checkmeout">
+                    <label>Check me out</label>
+                </div>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+    </form>
+</body>
+</html>

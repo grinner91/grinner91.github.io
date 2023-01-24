@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WAP Fun World</title>
+    <link rel="stylesheet" href="w2lab1part2form2styles.css">
+</head>
+<body>
+    <div id="page-container">
+        <div id="navbar">
+            <div class="menu">
+                <ul>
+                    <li> MIU Golden Dom Market ::: SRM</li>
+                    <li> Products</li>
+                    <li> Supliers</li>
+                </ul>
+            </div>
+            <div class="navbar-right-contents">
+                <span>Hello!</span>
+                <button >Signout</button>
+            </div>
+        </div>
+        <div class= "new-product-forms">
+            <form method="POST">
+            <div class="column">
+                <div class="row">
+                    <label> Product number</label>
+                    <input type='text' 
+                    id="productnumber"
+                    placeholder="product number"
+                    pattern="([0-9]){2,}"
+                    title="Please, enter a valid product number"
+                    required
+                    >
+                </div>
+                <div class="row">
+                    <label> Name</label>
+                    <input type='text' 
+                    id="name"
+                    placeholder="product name"
+                    required
+                    >
+                </div>
+                <div class="row">
+                    <label> Unit Price</label>
+                    <input type='text' 
+                    id="unitprice"
+                    placeholder="0.0"
+                    pattern="^([0-9]){1,5}$"
+                    title="Please, enter a valid product unit price"
+                    required
+                    >
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="row">
+                    <label> Quantity in stock</label>
+                    <input type='text' 
+                    id="quantity"
+                    placeholder="0"
+                    pattern="([0-9]){2,}"
+                    title="Please, enter product quantity"
+                    required
+                    >
+                </div>
+                <div class="row">
+                    <label> Suplier</label>
+                   <select id="supplier">
+                       <option selected>Select supplier</option>
+                       <option value="amazon">Amazon</option>
+                       <option value="walmart">Wal mart</option>
+                   </select>
+                </div>
+                <div class="row">
+                    <label> Supply Date</label>
+                    <input type='text' 
+                    id="supplydate"
+                    placeholder="yyyy-mm-dd"
+                    pattern="^([0-9]){4}\-([0-9]){2}\-([0-9]){2}}$"
+                    title="Please, enter a valid date"
+                    required
+                    >
+                </div>
+            </div>
+            <div class="productbuttons">
+                <input type="reset">
+                <input type="button" value="Cancel">
+                <input type="submit" name="addproduct" value="Add product">
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

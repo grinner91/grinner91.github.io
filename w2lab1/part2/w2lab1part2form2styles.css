@@ -1,0 +1,111 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#page-container {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: cornflowerblue;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+}
+
+.menu {
+    width:auto ;
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+}
+.menu > ul {
+    display: inline;
+}
+
+.menu li {
+    display: inline-block;
+    border-right: 1px solid white;
+    padding: 10px;
+}
+
+.navbar-right-contents {
+    position:absolute;
+    vertical-align: middle;
+    text-align: center;
+    right: 0px;
+    padding: 10px;
+    border-color: 0px solid red;
+}
+
+.navbar-right-contents > button {
+    background-color: aliceblue;
+    border: 0px outset green;
+    width: fit-content;
+    padding: 5px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.new-product-forms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 0px solid orangered;
+}
+
+.column {
+    flex: 50%;
+
+    width: 500px;
+    border: 0px solid violet;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 0px solid red;
+}
+
+.row > label {
+    display: block;
+}
+
+.row > input {
+    display: block;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.row > span {
+    font-size: smaller;
+    color: grey;
+}
+
+button {
+    background-color: cornflowerblue;
+    border: 0;
+}
+
+.productbuttons {
+    position: absolute;
+    right: 100px;
+    margin: 10px;
+    padding: 10px;
+}
