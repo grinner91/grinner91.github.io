@@ -141,24 +141,128 @@
 /////////////////////////////////////////////
 
 
+// var me = {
+//     first: 'Tina',
+//     last: 'Xing', 
+//     getFullName: function() {
+//     return this.first + ' ' + this.last; }
+//     };
+
+
+//     var you = { 
+//     first: 'Rujuan', 
+//     last: 'Xing'
+//     };
+
+// console.log(me.getFullName.apply(you)); 
+// console.log(me.getFullName.call(you));
+// // Rujuan Xing 
+// //would it work with call? How about bind?
+
+// function longestNoSpace(...strs) {
+//     //console.log('strs: ',strs)
+//     //console.log('[...strs]: ',[...strs])
+//     return strs
+//     .filter(str => !str.includes(" "))
+//     .map(str => str.length)
+//     .reduce((max, len) => (len > max ? len : max), 0);
+// }
+//  console.log('longest no space: ',longestNoSpace('a   a', 'bbadgadfgsdfgbb', 'c      c'));
+
+/*************************************/
+// function b() {
+//     function a(){
+//         console.log(x); //10
+//     }
+//     var x = 10;
+//     a();
+// }
+// var x = 20;
+// b();
+
+/////////////////////////////
+// function f() {
+//     var a = 1, b = 20, c;
+//     console.log(a + " " + b + " " + c); 
+//     function g() {
+//         var b = 300, c = 4000; 
+//         console.log(a + " " + b + " " + c); 
+//         a = a + b + c;
+//         console.log(a + " " + b + " " + c);
+//     }
+//     console.log(a + " " + b + " " + c); 
+//     g();
+//     console.log(a + " " + b + " " + c);
+//     } 
+    
+//     f();
+////////////////////////////
+
+// var x = 10; 
+// function main() {
+//     console.log("x1 is:" + x); x = 20;
+//     console.log("x2 is:" + x); if (x > 0) {
+//     var x = 30;
+//     console.log("x3 is:" + x); }
+//     console.log("x4 is:" + x); var x = 40;
+//     var f = function(x) {
+//     console.log("x5 is:" + x); };
+//     f(50);
+//     console.log("x6 is:" + x); 
+// }
+//     main();
+
+// const x = 1;
+//   function f() {
+//       let y = 2;
+//       const sum = function() {
+//           const z = 3;
+//           console.log(x + y + z);
+//       }
+// y = 10;
+//       return sum;
+//   } //end of f
+//   const g = f();
+//   g();
+
+
+// var a = {
+//     name: "",
+//     log: function() {
+//         //var self = this;
+//         this.name = "Hello"; 
+//         console.log(this.name); //Hello
+//         var setFrench = function(newname) {
+//             this.name = newname; 
+//         };
+//         setFrench("Bonjour");
+//         console.log(this.name); //Bonjour 
+//     }
+// };
+
+// a.log();
+
+
+///////////////////////////
+// function add(x, y) {
+//     return x + y;
+// }
+
+// const add2 = add.bind(null, 2);
+// console.log(add2(3));
+
+
+// console.log(add.apply(null, [2, 7]));
+// console.log(add.call(null, 2, 1));
+
+///////////////////////////
 var me = {
     first: 'Tina',
     last: 'Xing', 
     getFullName: function() {
-    return this.first + ' ' + this.last; }
+            return this.first + ' ' + this.last; }
     };
 
-
-    var you = { 
-    first: 'Rujuan', 
-    last: 'Xing'
-    };
-
+var you = { first: 'Rujuan', last: 'Xing'};
 console.log(me.getFullName.apply(you)); 
-console.log(me.getFullName.call(you));
-// Rujuan Xing 
-//would it work with call? How about bind?
-
-
-
-
+console.log(me.getFullName.call(you)); 
