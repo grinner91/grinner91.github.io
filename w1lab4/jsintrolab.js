@@ -114,7 +114,7 @@ and returns the length of the longest one.
 */
 
 function findLongestWord(words) {
-    return words.reduce((acc, w) => acc.length < w.length ? w : acc, "");
+    return words.reduce((acc, w) =>  w.length > acc.length  ? w : acc, "");
 }
 
 console.log("Expected output of findLongestWord(['a','bb']) is  'bb' " + myFunctionTest("bb", findLongestWord(['a','bb'])));

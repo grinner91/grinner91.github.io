@@ -256,13 +256,40 @@
 // console.log(add.call(null, 2, 1));
 
 ///////////////////////////
-var me = {
-    first: 'Tina',
-    last: 'Xing', 
-    getFullName: function() {
-            return this.first + ' ' + this.last; }
-    };
+// var me = {
+//     first: 'Tina',
+//     last: 'Xing', 
+//     getFullName: function() {
+//             return this.first + ' ' + this.last; }
+//     };
 
-var you = { first: 'Rujuan', last: 'Xing'};
-console.log(me.getFullName.apply(you)); 
-console.log(me.getFullName.call(you)); 
+// var you = { first: 'Rujuan', last: 'Xing'};
+// console.log(me.getFullName.apply(you)); 
+// console.log(me.getFullName.call(you)); 
+
+let person = function(name) {
+	this.name = name;
+ };
+
+ person.prototype.__proto__.speak = function() {
+   return this.name;
+ }
+ 
+ let dave = new person("Dave Smith");
+ 
+ let charlie = new person("Charlez Brown");
+ 
+ charlie.eat = function() {
+   return "eating....";
+ }
+
+ console.log(dave.speak())
+ console.log(charlie.speak())
+ console.log(charlie.eat())
+ 
+ ///////////////////////
+ let a = (function (x, y) {
+	return x * y;
+ })(6, 7);
+ 
+ console.log(a);

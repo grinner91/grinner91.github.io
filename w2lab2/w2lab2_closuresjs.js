@@ -143,9 +143,9 @@ const employee = (function(){
         getAge: getAge,
         getName: getName,
 
-        setName: function(name) { setName(name) },
-        setAge: function(age) { setAge(age) },
-        setSalary: function(salary) { setSalary(salary)},
+        setName: setName,
+        setAge: setAge,
+        setSalary: setSalary,
 
         increaseSalary: function (percentage) { 
             let currentSal = getSalary();

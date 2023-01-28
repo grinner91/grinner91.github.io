@@ -102,9 +102,13 @@ output:
 Q5: What is the output of the following alert (without running it)
 */
 
-var foo;
+var foo = 1;
 function bar() {
+    //let a = (!undefined) ? 'a' : 'b';
+    console.log('a : ', a);
+
     if(!foo) {
+        //console.log('foo in if {} : ', foo)
         var foo = 100;
     }
     //alert(foo); //100, since foo is hoisted whithin bar() local scope, and assigned foo = 100
@@ -113,4 +117,4 @@ function bar() {
 bar();
 
 //output: 
-100  //100, since foo is hoisted whithin bar() local scope, if !foo means it exsisted and == assigned foo = 100
+//100  //100, since foo is hoisted whithin bar() local scope, if !foo means it exsisted and == assigned foo = 100
