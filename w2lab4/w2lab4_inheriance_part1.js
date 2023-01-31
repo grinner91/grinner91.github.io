@@ -54,7 +54,7 @@ Native Prototypes:
 		  alert("Hello!");
 		}
 
-f.defer(1000); 
+   f.defer(1000); 
 	Add the decorating “defer()” to functions  
 		Function.prototype.defer = function(ms) {
 			let f = this;
@@ -73,7 +73,7 @@ f.defer(1000);
 ////////////////////////    
 Prototype Methods:
 	The difference between calls
-		 only the first call shows Rabbit, other ones show undefined
+	only the first call shows Rabbit, other ones show undefined
 
 */
 

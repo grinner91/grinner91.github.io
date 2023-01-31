@@ -46,7 +46,9 @@ console.log([6,4,0, 3,-2,1].bubbleSort());
 
 ////////////////////////exercise 3
 
-function Person() { }
+function Person() {
+
+ }
 
 Person.prototype.initialize = function (name, age) {
     this.name = name;
@@ -57,7 +59,10 @@ Person.prototype.describe = function () {
     return this.name + ", " + this.age + " years old.";
 };
   
-function Teacher() { }
+function Teacher() {
+
+ }
+ 
 Teacher.prototype = new Person();
   
 Teacher.prototype.teach = function (subject) {
@@ -65,6 +70,6 @@ Teacher.prototype.teach = function (subject) {
 };
 
 let teacher = new Teacher();
-teacher.initialize("John", 30);
-console.log(teacher.teach("JavaScript"));
+teacher.initialize("Zaman", 40);
+console.log(teacher.teach("WAP"));
 
