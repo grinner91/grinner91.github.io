@@ -50,3 +50,36 @@ class Employee extends Person {
     }
    
 }
+
+
+
+class Duck {
+    constructor(flying = false, quacking = false, xPos = 0, yPos = 0) {
+    this.flying = flying;
+    this.quacking = quacking;
+    this.xPos = xPos;
+    this.yPos = yPos;
+}
+takeOff() {
+    this.flying = true;
+}
+land() {
+    this.flying = false;
+}
+startQuacking() {
+    this.quacking = true;
+}
+stopQuacking() {
+    this.quacking = false;
+}
+moveTo(x, y) {
+    this.xPos = x;
+    this.yPos = y;
+}
+status(){
+    console.log(`Duck is swimming to ${x}, ${y}`);
+}
+
+}
+
+module.exports = Duck;
