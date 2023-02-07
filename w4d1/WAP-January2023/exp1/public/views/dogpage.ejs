@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dynamic Dog Page!</title>
+        <link href="css/dogstyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <%- include ('banner.ejs')%>
+        <h1><%=title%></h1>
+        
+        <div id="container">
+            <%for(dog of dognames){%>
+                <div class="dogtag">
+                    <%
+                    let d = "http://www.google.com/search?q="+ dog 
+                    %>
+                    <a href=<%=d%>>
+                        <%=dog%>
+                    </a>
+                </div>
+            <%}%>
+        </div>
+        <%- include ('banner.ejs')%>
+        <%- include ('banner.ejs')%>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+#container{
+    display: flex;
+}
+.dogtag{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    margin: 1%;
+}
+
+#banner{
+    background-color: blue;
+    text-align: center;
+}

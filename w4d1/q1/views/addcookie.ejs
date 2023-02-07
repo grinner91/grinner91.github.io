@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W4D1HomeWork</title>
+    </head>
+    <body>
+        <form  action="/addcookie" method="POST">
+           Cookie Key: <input type="text" name="ckey">
+           Cookie Value: <input type="text" name="cvalue">
+           <input type="submit" value="Add Cookie">
+        </form>
+        <table>
+            <caption>All Cookies</caption> 
+            <th><td>Key</td> <td>Value</td></th>
+            <% for(let ck in cookiesList) {%>
+                <tr>
+                    <td><%= ck %></td>s
+                    <td><%= cookiesList[ck] %></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

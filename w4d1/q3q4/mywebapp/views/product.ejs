@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>W3D6 Q3Q4</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+<body>
+<%- include('header'); -%>
+
+<div class="contents">
+<h2>Product Details </h2>
+    <% for(let prod of products) { %>
+        <div class="productitem">
+            <p>Id: <%= prod.id %></p>
+            <p>Name: <%= prod.name %></p>
+            <p>Price: <%= prod.price %></p>
+            <p>Description: <%= prod.desc %></p>
+            <form action="/addtocart" method="post">
+                <input type="hidden" name="prodId" value="<%= prod.id %>">
+                <p> <input type="submit" value="Add to Cart" ></p>
+            </form>
+        </div>
+    <% } %>
+        
+</div>
+
+<%- include('footer'); -%>
+</body>
+</html>

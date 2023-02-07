@@ -82,4 +82,30 @@ status(){
 
 }
 
-module.exports = Duck;
+
+
+//module.exports = Duck;
+
+
+
+class User {
+    constructor(name = "Anonymous") {
+        this.name = name;
+      }
+    sayHi() {
+      console.log(`Hello, ${this.name}!`);
+    } 
+}
+User.sound = 'bark';
+//TypeError: Class constructor User cannot be invoked without 'new'
+const fred =  new User(); 
+console.log('fred: ',fred); 
+console.log('User.sound: ',User.sound); 
+console.log('fred.__proto__: ',fred.__proto__); 
+console.log('User.prototype: ',User.prototype); 
+fred.sayHi();
+
+
+const bob = new User("Bob");
+    console.log(bob);
+    bob.sayHi();
