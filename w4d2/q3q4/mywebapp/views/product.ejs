@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>W3D6 Q3Q4</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/js/products.js"></script>
+    
+    </head>
+<body>
+<%- include('header'); -%>
+
+<div class="contents">
+    <a  href="/shoppingcart">Shopping cart 
+        <h2 id="statusmsg"></h2>
+    </a>
+<h2>Product Details </h2>
+    <% for(let prod of products) { %>
+        <div class="productitem">
+            <p>Id: <%= prod.id %></p>
+            <p>Name: <%= prod.name %></p>
+            <p>Price: <%= prod.price %></p>
+            <p>Description: <%= prod.desc %></p>
+            <div>
+                <button class="addtocart" 
+                id="<%= prod.id %>"
+                name="addtocart_<%= prod.id %>" 
+                prodid="<%= prod.id %>">Add to Cart</button>
+            </div>
+        </div>
+    <% } %>
+        
+</div>
+<div>
+    Number items in shopping cart
+    <p id="itemscount"></p>
+    
+</div>
+
+<%- include('footer'); -%>
+</body>
+</html>
